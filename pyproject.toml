@@ -5,8 +5,19 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">3.9,<3.11"
 dependencies = [
+    "aiosqlite>=0.20.0",
+    "alembic>=1.14.0",
+    "bcrypt>=4.2.1",
     "demucs>=4.0.1",
+    "fastapi[all]>=0.86.0",
+    "jinja2>=3.1.5",
+    "loguru>=0.7.3",
     "numpy<2",
+    "passlib[bcrypt]>=1.7.4",
+    "pydantic>=1.10.19",
     "pydub>=0.25.1",
+    "python-jose>=3.3.0",
     "spleeter>=2.4.0",
+    "sqlalchemy>=2.0.36",
+    "uvicorn>=0.18.3",
 ]

@@ -3,7 +3,7 @@ from pathlib import Path
 from spleeter.separator import Separator
 from pydub import AudioSegment
 
-output = Path('./output')
+output = Path('../../output')
 
 song = 'The Rasmus - In the Shadows (Official Music Video).mp3'
 song = 'Queen - The Show Must Go On (Official Video).mp3'
@@ -49,13 +49,13 @@ def combine_together(song_name: str, *paths: Path):
 
 
 def main():
-    music = Path('.') / song
+    music = Path('../..') / song
     print(music.is_file())
     split_type = SplitType.four_stems
     # split_by_spleeter(music, split_type)
 
     paths = [
-        Path('./output/spleeter') / split_type.value / song.rsplit('.', maxsplit=1)[0] / part.value for part in [
+        Path('../../output/spleeter') / split_type.value / song.rsplit('.', maxsplit=1)[0] / part.value for part in [
             SongParts.vocals,
             SongParts.bass,
             SongParts.drums,
